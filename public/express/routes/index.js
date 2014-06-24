@@ -20,7 +20,7 @@ var nodeBucket = [];
 //get a list of commits
 
 var owner = "grrr",
-    repo_slug = "melkweg";
+    repo_slug = repo;
 
 dataGetter(owner, repo_slug);
 
