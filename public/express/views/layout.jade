@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js")
+  body
+    block content
+  footer
+  script.
+    var additions = [#{additions}];
+    var removals = [#{removals}];
+    var filenames = [#{filenames}];
+  script(src="javascripts/main.js")

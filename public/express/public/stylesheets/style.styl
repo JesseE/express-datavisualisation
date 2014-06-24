@@ -1,0 +1,44 @@
+body
+  padding: 50px
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+h1
+  float:left;
+  width:100%;
+text
+  -webkit-transform: rotate(180deg)
+a
+  color: #00B7FF
+.added > div
+  height:10px;
+  font: 10px sans-serif;
+  background-color: crimson;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+.removed, .added
+  width:500px;
+  float:left;
+  -webkit-transition: color .2s,background .2s;
+  transition: color .2s,background .2s;
+div.removed
+  -webkit-transform: rotate(180deg)
+div.container
+  width: 100%;
+  float: left;
+  margin-top: 100px;
+  -webkit-transform: rotate(90deg)
+.removed > div
+  height:10px;
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+.removed:hover > div
+  opacity: 0.8;
+  background: steelblue;
+.added:hover > div
+  opacity: 0.8;
+  background: crimson;
