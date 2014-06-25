@@ -9,7 +9,6 @@ text
 a
   color: #00B7FF
 .added > div
-  height:10px;
   font: 10px sans-serif;
   background-color: crimson;
   text-align: right;
@@ -17,18 +16,20 @@ a
   margin: 1px;
   color: white;
 .removed, .added
-  width:500px;
   float:left;
   -webkit-transition: color .2s,background .2s;
   transition: color .2s,background .2s;
 div.removed
-  -webkit-transform: rotate(180deg)
+  -webkit-transform: matrix(-1, 0, 0, -1, 0, 0);
+div.added
+  -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
 div.container
+  margin-top: 400px;
+  width:100%;
   float: left;
-  margin-top: 100px;
-  -webkit-transform: rotate(90deg)
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
 .removed > div
-  height:10px;
   font: 10px sans-serif;
   background-color: steelblue;
   text-align: right;
@@ -41,3 +42,8 @@ div.container
 .added:hover > div
   opacity: 0.8;
   background: crimson;
+div.author
+  float: left;
+  width:200px;
+div.comment
+  float: left;

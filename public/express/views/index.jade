@@ -2,7 +2,14 @@ extends layout
 
 block content
   h1= title
-  div(id="info")
+  div(class="author")
+    ul
+     each val in authors
+      li= val
+  div(class="comment")
+    ul
+     each val in comments
+      li= val
   div(class="container")
    div(class='removed')
    div(class='added')

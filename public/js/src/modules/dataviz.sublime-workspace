@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"body",
+				"body"
+			],
+			[
+				"m",
+				"MyController"
+			],
+			[
+				"h",
+				"h4	Tag"
+			],
+			[
 				"sele",
 				"selectAll"
 			],
@@ -502,60 +514,24 @@
 			[
 				"prov",
 				"provider_details"
-			],
-			[
-				"conta",
-				"contact_name"
-			],
-			[
-				"array_key",
-				"array_key_exists"
-			],
-			[
-				"user",
-				"user_id"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/home/sander/Sites/grrr.nl/application/configs/application.ini",
+			"file": "/home/sander/Sites/experimental/public/index.html",
 			"settings":
 			{
-				"buffer_size": 10770,
+				"buffer_size": 899,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/index/work.phtml",
+			"file": "/home/sander/Sites/experimental/public/app.js",
 			"settings":
 			{
-				"buffer_size": 1261,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/partials/articles/excerpt.phtml",
-			"settings":
-			{
-				"buffer_size": 534,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/index/job.phtml",
-			"settings":
-			{
-				"buffer_size": 420,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/sander/Sites/grrr.nl/public/css/config.rb",
-			"settings":
-			{
-				"buffer_size": 195,
+				"buffer_size": 1121,
 				"line_ending": "Unix"
 			}
 		}
@@ -563,9 +539,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 144.0,
+		"height": 74.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"insatl",
 				"Package Control: Install Package"
@@ -585,13 +565,9 @@
 			[
 				"Package Control: insta",
 				"Package Control: Install Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			]
 		],
-		"width": 457.0
+		"width": 475.0
 	},
 	"console":
 	{
@@ -616,6 +592,11 @@
 	},
 	"file_history":
 	[
+		"/home/sander/Sites/experimental/application/modules/default/views/layouts/layout.phtml",
+		"/home/sander/Sites/grrr.nl/public/css/config.rb",
+		"/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/index/job.phtml",
+		"/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/index/work.phtml",
+		"/home/sander/Sites/grrr.nl/application/configs/application.ini",
 		"/home/sander/Sites/grrr.nl/public/.htaccess",
 		"/home/sander/Sites/grrr.nl/library/Golem/Cli/Command/Cdn.php",
 		"/home/sander/Sites/grrr.nl/application/configs/content.ini",
@@ -701,6 +682,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"angular",
 			"cdn",
 			"173",
 			"removed",
@@ -827,8 +809,7 @@
 			"unregisterobserver",
 			"htmlLink",
 			"book",
-			"order",
-			"$model = new Model_Book();"
+			"order"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -855,87 +836,29 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/sander/Sites/grrr.nl/application/configs/application.ini",
+					"file": "/home/sander/Sites/experimental/public/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10770,
+						"buffer_size": 899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10121,
-								10121
+								740,
+								740
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 3900.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/index/work.phtml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1261,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								435,
-								435
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/partials/articles/excerpt.phtml",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -945,60 +868,31 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/index/job.phtml",
+					"buffer": 1,
+					"file": "/home/sander/Sites/experimental/public/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 420,
+						"buffer_size": 1121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								203,
-								203
+								584,
+								584
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/sander/Sites/grrr.nl/public/css/config.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 195,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2,
-								2
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
