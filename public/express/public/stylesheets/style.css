@@ -47,13 +47,15 @@ div.container {
   margin: 1px;
   color: #fff;
 }
-.removed:hover > div {
-  opacity: 0.8;
+.removed > div:hover {
   background: #4682b4;
+  -webkit-transition: div 0.2s ease-in-out;
+  -webkit-transform: scale(2);
 }
-.added:hover > div {
-  opacity: 0.8;
+.added > div:hover {
   background: #dc143c;
+  -webkit-transition: div 0.2s ease-in-out;
+  -webkit-transform: scale(2);
 }
 div.author {
   float: left;
@@ -61,4 +63,5 @@ div.author {
 }
 div.comment {
   float: left;
+  width: 75%;
 }

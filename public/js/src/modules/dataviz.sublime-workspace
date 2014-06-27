@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"one",
+				"oneCommit"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"on",
+				"oneCommit"
+			],
+			[
+				"Data",
+				"dataSetter"
+			],
+			[
+				"commit",
+				"commmit_hash"
+			],
+			[
+				"valu",
+				"Values"
+			],
+			[
 				"body",
 				"body"
 			],
@@ -186,10 +210,6 @@
 			[
 				"background",
 				"background-image"
-			],
-			[
-				"i",
-				"i"
 			],
 			[
 				"res",
@@ -494,44 +514,51 @@
 			[
 				"gar",
 				"Garp_Cli"
-			],
-			[
-				"grou",
-				"group_data"
-			],
-			[
-				"end",
-				"enddate"
-			],
-			[
-				"time",
-				"time_format"
-			],
-			[
-				"into",
-				"intro"
-			],
-			[
-				"prov",
-				"provider_details"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/home/sander/Sites/experimental/public/index.html",
+			"file": "/home/sander/Sites/datavisualisatie/public/express/public/stylesheets/style.styl",
 			"settings":
 			{
-				"buffer_size": 899,
+				"buffer_size": 1135,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/sander/Sites/experimental/public/app.js",
+			"file": "/home/sander/Sites/datavisualisatie/public/express/public/javascripts/main.js",
 			"settings":
 			{
-				"buffer_size": 1121,
+				"buffer_size": 640,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var express = require('express');\nvar router = express.Router();\nvar unirest = require('unirest');\nvar d3 = require('d3');\nvar Harvest = require('harvest');\n\nvar additions = [];\nvar removals = [];\nvar filenames = [];\nvar author = [];\nvar comment = [];\nvar commits = [];\nvar allValues = [];\nvar allCommits = [];\nvar pushCommit = [];\n\nvar accountname = \"grrr\",\n    repo = \"melkweg\";\nvar owner = \"grrr\",\n    repo_slug = repo;\n\ndataGetter();\n\nfunction dataGetter(){\n  unirest.get('https://bitbucket.org/api/2.0/repositories/'+owner+'/'+repo_slug+'/commits').auth({\n    user: 'jesseeikema',\n    pass: 'Eikema22',\n    sendImmediately: true\n  }).end(function(response){\n    var data = response.body.values;\n    data.length =  20;\n    for (var i = 0, len = data.length; i < len; i++) {\n      data[i];\n      commits.push(data[i].hash);\n      author.push(data[i].author.user.display_name);\n      comment.push(data[i].message);\n    }\n    dataSetter();\n  });\n};\n\n// need to fix this!\n// if hash already exists remove the old one\n\nfunction dataSetter(){\n  for (var i = 0; i < commits.length; i++) {\n    commits[i];\n    console.log(commits[i]);\n    unirest.get('https://bitbucket.org/api/1.0/repositories/'+accountname+'/'+repo+'/changesets/'+commits[i]+'/diffstat').auth({\n    user: 'jesseeikema',\n    pass: 'Eikema22',\n    sendImmediately: true\n  }).end(function(response){\n\n    var dataSet = response.body;\n\n    for (var i = 0, len = dataSet.length; i < len; i++) {\n\n      dataSet[i];\n      additions.push(dataSet[i].diffstat.added);\n      removals.push(dataSet[i].diffstat.removed);\n      var oneCommit = [];\n      oneCommit.push(dataSet[i].diffstat.added, dataSet[i].diffstat.removed);\n\n    };\n\n    commitHandling(oneCommit);\n  });\n  };\n\n  allValues.push(additions, removals);\n  timeTracking();\n};\n\nfunction commitHandling(oneCommit){\n}\n\nfunction timeTracking(){\n  var harvest = new Harvest({\n    \n  })\n}\n\n/* GET home page. */\nrouter.get('/', function(req, res) {\n  res.render('index', {\n    comments: comment,\n    authors: author,\n    additions: additions,\n    removals: removals,\n    allValues: allValues\n  });\n});\n\nmodule.exports = router;\n",
+			"file": "/home/sander/Sites/datavisualisatie/public/express/routes/index.js",
+			"file_size": 2114,
+			"file_write_time": 130483303462721390,
+			"settings":
+			{
+				"buffer_size": 2134,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/sander/Sites/datavisualisatie/public/express/views/index.jade",
+			"settings":
+			{
+				"buffer_size": 257,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/sander/Sites/datavisualisatie/public/express/views/layout.jade",
+			"settings":
+			{
+				"buffer_size": 437,
 				"line_ending": "Unix"
 			}
 		}
@@ -539,7 +566,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 74.0,
+		"height": 400.0,
 		"selected_items":
 		[
 			[
@@ -592,6 +619,8 @@
 	},
 	"file_history":
 	[
+		"/home/sander/Sites/experimental/public/app.js",
+		"/home/sander/Sites/experimental/public/index.html",
 		"/home/sander/Sites/experimental/application/modules/default/views/layouts/layout.phtml",
 		"/home/sander/Sites/grrr.nl/public/css/config.rb",
 		"/home/sander/Sites/grrr.nl/application/modules/default/views/scripts/index/job.phtml",
@@ -836,29 +865,31 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/sander/Sites/experimental/public/index.html",
+					"file": "/home/sander/Sites/datavisualisatie/public/express/public/stylesheets/style.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 899,
+						"buffer_size": 1135,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								740,
-								740
+								1135,
+								1135
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -869,30 +900,122 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/home/sander/Sites/experimental/public/app.js",
+					"file": "/home/sander/Sites/datavisualisatie/public/express/public/javascripts/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1121,
+						"buffer_size": 640,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								584,
-								584
+								536,
+								536
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/sander/Sites/datavisualisatie/public/express/routes/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1888,
+								1888
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 675.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/sander/Sites/datavisualisatie/public/express/views/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42,
+								42
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/sander/Sites/datavisualisatie/public/express/views/layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1446,7 +1569,7 @@
 		[
 			[
 				"",
-				"~/Sites/datavisualisatie/public/js/src/modules/dataviz.sublime-project"
+				"~/Sites/resizer/public/js/src/modules/resizer.sublime-project"
 			]
 		],
 		"width": 380.0
