@@ -1,0 +1,78 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+h1 {
+  float: left;
+  width: 100%;
+}
+span {
+  text-align: center;
+}
+div.removed span {
+  -webkit-transform: rotate(90deg);
+  width: 100px;
+  background: #4682b4;
+}
+div.added span {
+  -webkit-transform: matrix(-1, 0, 0, -1, 0, 0);
+  -webkit-transform: rotate(-270deg);
+  background: #dc143c;
+  width: 100px;
+}
+a {
+  color: #00b7ff;
+}
+.added > div {
+  font: 10px sans-serif;
+  background-color: #dc143c;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: #fff;
+}
+.removed,
+.added {
+  float: left;
+  -webkit-transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s;
+}
+div.removed {
+  -webkit-transform: matrix(-1, 0, 0, -1, 0, 0);
+}
+div.added {
+  -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
+}
+div.container {
+  margin-top: 500px;
+  width: 100%;
+  float: left;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+}
+.removed > div {
+  font: 10px sans-serif;
+  background-color: #4682b4;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: #fff;
+}
+.removed > div:hover {
+  background: #4682b4;
+  -webkit-transition: div 0.2s ease-in-out;
+  -webkit-transform: scale(2);
+}
+.added > div:hover {
+  background: #dc143c;
+  -webkit-transition: div 0.2s ease-in-out;
+  -webkit-transform: scale(2);
+}
+div.author {
+  float: left;
+  width: 200px;
+}
+div.comment {
+  float: left;
+  width: 75%;
+}
